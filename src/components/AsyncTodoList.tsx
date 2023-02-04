@@ -8,7 +8,8 @@ import {selectAllAsyncTodos} from "../store/AsyncTodo/asyncTodoSelector";
 import {fetchAllTodos, removeTodo, toggleTodo} from "../store/AsyncTodo/todoAsyncActions";
 
 export const AsyncTodoList = () => {
-    const {list, status} = useSelector(selectAllAsyncTodos);
+    const {list} = useSelector(selectAllAsyncTodos);
+    console.log('list', list);
     const dispatch = useAppDispatch();
     const toggleCurrentTodo = (id: Todo['id']) => {
         dispatch(toggleTodo(id));

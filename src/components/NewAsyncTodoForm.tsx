@@ -1,6 +1,5 @@
 import {useRef} from 'react'
 import {useAppDispatch} from "../store/redux-hooks";
-import {addTodo} from "../store/todoSlice";
 import {createTodo} from "../store/AsyncTodo/todoAsyncActions";
 
 const NewTodoForm = () => {
@@ -18,7 +17,7 @@ const NewTodoForm = () => {
         <>
             <input
                 type="text"
-                placeholder="new todo"
+                placeholder="new async todo"
                 ref={inputRef}
             />
             <button onClick={onClick}>Add todo</button>
